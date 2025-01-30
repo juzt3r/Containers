@@ -1,6 +1,11 @@
 ---
-title: Full Stack miljø bestående av tre komponenter
-author: Leif-Petter Johansen (mailto:leif-petter.johansen@gokstadakademiet.no), Eirik Schølseth (mailto:eirik.scholseth@gokstadakademiet.no)
+name: Leif-Petter Johansen 
+contact: (mailto:leif-petter.johansen@gokstadakademiet.no)
+---
+
+---
+name: Eirik Schølseth 
+contact: (mailto:eirik.scholseth@gokstadakademiet.no)
 ---
 
 
