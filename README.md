@@ -1,10 +1,11 @@
 # Full Stack miljø bestående av tre komponenter
-About us: 
----
-Leif-Petter Johansen - (mailto:leif-petter.johansen@gokstadakademiet.no)
-Eirik Schølseth - (mailto: eirik.scholseth@gokstadakademiet.no)
----
+Who dis? 
+* Leif-Petter Johansen - (mailto:leif-petter.johansen@gokstadakademiet.no)
+* Eirik Schølseth - (mailto: eirik.scholseth@gokstadakademiet.no)
 
+
+
+## Hvordan starte prosjektet 
 * Opprett en mappe f.eks ```docker```
 * flytt ```docker-compose.yml``` filen til nye mappen
 * Kjør steget ```Generere test-data for database```
