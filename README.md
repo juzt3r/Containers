@@ -1,4 +1,51 @@
-# Full Stack Miljø bestående av tre komponenter
+# Full Stack miljø bestående av tre komponenter
+
+
+## Forarbeid for å opp testmiljø
+
+
+### Generere test-data for database
+Vi genererer en init.sql fil som lager en database og fyller den med test data
+Da kan man bruke denne koden: 
+``` 
+echo "CREATE TABLE IF NOT EXISTS USERS (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO USERS (username, email) VALUES
+('johndoe', 'johndoe@example.com'),
+('janedoe', 'janedoe@example.com'),
+('alice', 'alice@example.com'),
+('Eirik', 'escimo@Gay4Pay.com'),
+('Leif', 'LeifTheBoss@SuperDude.com'),
+('bob', 'bob@example.com');" > init.sql
+
+```
+
+### Genereate nginx.conf
+Lager nginx-config filen som sier at man skal redirecte trafikk på port 80 til port api-container:5000
+```
+
+echo "
+events {}
+
+http {
+    server {
+        listen 80;
+        location / {
+            proxy_pass http://api:5000;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+        }
+    }
+}" > nginx.conf
+```
+
+
+
 
 ## App
 Applikasjonen er en enkel API
@@ -38,41 +85,4 @@ mysql
 
 
 
-## Generere test-data for database
-``` 
-echo "CREATE TABLE IF NOT EXISTS USERS (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
-INSERT INTO USERS (username, email) VALUES
-('johndoe', 'johndoe@example.com'),
-('janedoe', 'janedoe@example.com'),
-('alice', 'alice@example.com'),
-('Eirik', 'escimo@Gay4Pay.com'),
-('Leif', 'LeifTheBoss@SuperDude.com'),
-('bob', 'bob@example.com');" > init.sql
-
-```
-
-## Genereate nginx.conf
-
-```
-
-echo "
-events {}
-
-http {
-    server {
-        listen 80;
-        location / {
-            proxy_pass http://api:5000;
-            proxy_set_header Host $host;
-            proxy_set_header X-Real-IP $remote_addr;
-        }
-    }
-}" > nginx.conf
-```
 
