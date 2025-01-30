@@ -103,3 +103,4 @@ D:\Docker\innlevering1\UptimeAPI\obj\Debug\net8.0\refint\UptimeAPI.dll
 D:\Docker\innlevering1\UptimeAPI\obj\Debug\net8.0\UptimeAPI.pdb
 D:\Docker\innlevering1\UptimeAPI\obj\Debug\net8.0\UptimeAPI.genruntimeconfig.cache
 D:\Docker\innlevering1\UptimeAPI\obj\Debug\net8.0\ref\UptimeAPI.dll
+D:\Docker\innlevering1\UptimeAPI\obj\Debug\net8.0\UptimeAPI.sourcelink.json
