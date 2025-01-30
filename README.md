@@ -1,7 +1,22 @@
 # Full Stack miljø bestående av tre komponenter
-Who dis? 
+### Prosjektmedlemmer: 
 * Leif-Petter Johansen - (mailto:leif-petter.johansen@gokstadakademiet.no)
 * Eirik Schølseth - (mailto: eirik.scholseth@gokstadakademiet.no)
+
+## Prosjektbeskrivelse
+Dette prosjektet setter opp et full-stack miljø med tre hovedkomponenter:
+- **Nginx:** Reverse proxy for API-en.
+- **.NET API:** Web API for håndtering av brukerdatabase.
+- **MySQL:** Database for lagring av brukerdata.
+
+Formålet med prosjektet er å demonstrere hvordan man kan sette opp en hel stack ved hjelp av Docker, Docker Compose og Nginx.
+
+### Teknologier som benyttes:
+- Docker
+- Docker Compose
+- Nginx
+- .NET 6 API
+- MySQL
 
 
 
@@ -70,28 +85,6 @@ http {
 
 
 
-## App
-Applikasjonen er en enkel API
-
-API\Uptime
-Bare får å få uptime på current. Denne var bare for å teste applikasjonen først.
-API\Users
-USERS henter ut alle brukere som ligger i Databaseserveren om er en mysql-docker container.
-
-DEP:
-``` 
-dotnet add package Microsoft.EntityFrameworkCore --version 8.0.0
-dotnet add package MySql.EntityFrameworkCore --version 8.0.33
-dotnet add package Pomelo.EntityFrameworkCore.MySql
-
-``` 
-
-
-## Proxy
-nginx
-
-## DB
-mysql
 
 
 ### Howto:
@@ -99,8 +92,6 @@ mysql
  docker ps
 
 
-
- https://hub.docker.com/repository/docker/juzt3r/dotnet_api/general
 
 
 
