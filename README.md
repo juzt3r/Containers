@@ -35,3 +35,44 @@ mysql
 
  C:\Users\juzt3>curl localhost:8080/api/users
 [{"id":1,"username":"johndoe","email":"johndoe@example.com"},{"id":2,"username":"janedoe","email":"janedoe@example.com"},{"id":3,"username":"alice","email":"alice@example.com"},{"id":4,"username":"Eirik","email":"escimo@Gay4Pay.com"},{"id":5,"username":"Leif","email":"LeifTheBoss@SuperDude.com"},{"id":6,"username":"bob","email":"bob@example.com"}]
+
+
+
+## Generere test-data for database
+``` 
+echo "CREATE TABLE IF NOT EXISTS USERS (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO USERS (username, email) VALUES
+('johndoe', 'johndoe@example.com'),
+('janedoe', 'janedoe@example.com'),
+('alice', 'alice@example.com'),
+('Eirik', 'escimo@Gay4Pay.com'),
+('Leif', 'LeifTheBoss@SuperDude.com'),
+('bob', 'bob@example.com');" > init.sql
+
+```
+
+## Genereate nginx.conf
+
+```
+
+echo "
+events {}
+
+http {
+    server {
+        listen 80;
+        location / {
+            proxy_pass http://api:5000;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+        }
+    }
+}" > nginx.conf
+```
+
