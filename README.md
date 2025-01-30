@@ -1,4 +1,8 @@
-# Full Stack miljø bestående av tre komponenter
+---
+title: Full Stack miljø bestående av tre komponenter
+author: Leif-Petter Johansen (mailto:leif-petter.johansen@gokstadakademiet.no), Eirik Schølseth (mailto:eirik.scholseth@gokstadakademiet.no)
+---
+
 
 * Opprett en mappe f.eks ```docker```
 * flytt ```docker-compose.yml``` filen til nye mappen
