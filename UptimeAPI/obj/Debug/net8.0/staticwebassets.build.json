@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "bZ0MapeYQbzGQI2VtQz3083/Rl6OjJADmr2vXQh3Fgc=",
+  "Source": "UptimeAPI",
+  "BasePath": "_content/UptimeAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
