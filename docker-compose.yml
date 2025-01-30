@@ -37,7 +37,7 @@ services:
       MYSQL_PASSWORD: PenisTooSmall
     volumes:
       - db_data:/var/lib/mysql
-      - ./DB/init.sql:/docker-entrypoint-initdb.d/init.sql # Legger inn testdata
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql # Legger inn testdata
     networks:
       - app_network
     # ports:
