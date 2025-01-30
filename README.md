@@ -1,5 +1,10 @@
 # Full Stack miljø bestående av tre komponenter
 
+* Opprett en mappe f.eks 'docker'
+* flytt docker-compose.yml filen til nye mappen
+* Kjør steget ```Generere test-data for database```
+* Kjør steget ```Generere nginx.conf```
+* Kjør kommandoen ``` docker-compose up -d ``` for å starte opp "detached". 
 
 ## Forarbeid for å opp testmiljø
 
@@ -43,7 +48,6 @@ http {
     }
 }" > nginx.conf
 ```
-
 
 
 
