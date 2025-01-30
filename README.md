@@ -19,8 +19,15 @@ Formålet med prosjektet er å demonstrere hvordan man kan sette opp en hel stac
 - MySQL
 
 
+## Hvordan starte prosjektet med git clone
 
-## Hvordan starte prosjektet 
+``` bash
+cd MyCode
+git clone https://github.com/juzt3r/Containers 
+cd Containers
+docker-compose up -d
+```
+## Hvordan starte prosjektet uten git clone
 * Opprett en mappe f.eks ```docker```
 * flytt ```docker-compose.yml``` filen til nye mappen
 * Kjør steget ```Generere test-data for database```
