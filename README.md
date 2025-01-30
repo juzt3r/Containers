@@ -1,9 +1,7 @@
 ---
 name: Leif-Petter Johansen 
 contact: (mailto:leif-petter.johansen@gokstadakademiet.no)
----
 
----
 name: Eirik Schølseth 
 contact: (mailto:eirik.scholseth@gokstadakademiet.no)
 ---
